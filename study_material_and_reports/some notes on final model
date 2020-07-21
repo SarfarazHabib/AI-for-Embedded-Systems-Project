@@ -1,0 +1,105 @@
+Project model_final:
+
+Unpruned training results:
+
+Epochs: 20
+number of parameters:1,976,706
+learning rate=0.009
+decay=0.01
+optimizer=adam
+
+training acc=99.55
+training loss=0.0466
+
+validation acc=92.46 
+validation loss=0.297
+
+test acc= 92.0149
+test loss=  0.316
+
+modelsize= 24 MB
+
+After pruning- Removed 20 channels from dense layer (20 out of 128):
+New parameters: 1,725,766
+
+Test acc=  92.0149
+Test loss=  0.3178
+
+
+modelsize= 6.7 MB
+
+
+Then since accuracy and loss didnt degrade much, we performed second iteration of pruning without retraining: 
+Removed 17 channels from dense layer (17 out of 108):
+
+Number of parameters:1,512,467
+Test Accuracy= 0.894
+Test loss= 0.398
+
+modelsize= 6.1 MB
+
+
+Now retraining since decrease in accuracy observed
+trained for 8 epochs 
+with lr =0.0003 
+decay = 0.01
+
+Test loss: 0.3051512723538413
+Test accuracy: 0.9149253720667825
+
+
+
+
+Pruning stage 3:
+Deleting 11/91 channels from layer: dense_1
+Number of parameters: 1,374,450
+
+Test loss: 0.30651829127055497
+Test accuracy: 0.9067164168429019
+
+
+
+
+After Retraining
+
+lr=0.0003
+decay=0.01
+Test loss: 0.2991234605881705
+Test accuracy: 0.9194029847187782
+
+
+
+Pruning Stage 4:
+Deleting 8/80 channels from layer: dense_1
+Total params: 1,274,074
+before retraining:
+
+Test loss: 0.3163469355497787
+Test accuracy: 0.9156716407234989
+
+After Retraining:
+lr=0.0003
+decay=0.01
+
+Test loss: 0.31133552469424347
+Test accuracy: 0.920149254087192
+
+
+
+
+Pruning Stage 5:
+Deleting 4/72 channels from layer: dense_1
+
+Total params: 1,223,886
+Test loss: 0.3141255222149749
+Test accuracy: 0.9194029854304755
+
+
+After Retraining
+
+
+Test loss: 0.3054659068584442
+Test accuracy: 0.9238805959473795
+
+
+
