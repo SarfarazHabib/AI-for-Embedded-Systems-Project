@@ -38,3 +38,6 @@ The whole project was implemented on python and ported to raspberry Pi for demon
 ### Installation
 
 ``pip install requirements.txt``
+
+### Link to the pre-trained models
+https://drive.google.com/drive/folders/1LgqRTIcpU_h5Bm5dcdw1M3RdxC3W7eJD
